@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADA-SELERA</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <img src="assets/1.png" alt="Logo Foodcourt">
+            <h1>ADA SELERA</h1>
+        </header>
+        <div class="menu-container">
+            <div class="menu-title">
+                <a href="index.html" style="text-align: left;font-size: 25px; background-color: #2a2a2a;">
+                    <h2>Menu Makanan</h2>
+                </a>
+            </div>
+            <div class="menu-title">
+                <a href="minuman.html" style="text-align: right; font-size: 31px;background-color: #2a2a2a;">
+                    <h3>Menu Minuman</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Makanan</th>
+                    <th>Harga</th>
+                    <th>Gambar Makanan</th>
+                    <th>Jumlah pesanan</th>
+                    <th>total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Isi tabel dengan data makanan -->
+                <tr id="makanan1">
+                    <td>Nasi Goreng</td>
+                    <td>Rp 15,000</td>
+                    <td><img src="assets/2.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan1-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                
+                <tr id="makanan2">
+                    <td>Indomie Goreng</td>
+                    <td>Rp 15,000</td>
+                    <td><img src="assets/3.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan2-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <tr id="makanan3">
+                    <td>lele Goreng</td>
+                    <td>Rp 18,000</td>
+                    <td><img src="assets/4.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan3-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <tr id="makanan4">
+                    <td>Sosis Telur</td>
+                    <td>Rp 3,000</td>
+                    <td><img src="assets/5.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan4-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <tr id="makanan5">
+                    <td>Tahu Walik</td>
+                    <td>Rp 1,000</td>
+                    <td><img src="assets/6.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan5-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <tr id="makanan6">
+                    <td>Burger</td>
+                    <td>Rp 8,000</td>
+                    <td><img src="assets/7.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan6-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <tr id="makanan7">
+                    <td>Kebab</td>
+                    <td>Rp 8,000</td>
+                    <td><img src="assets/8.jpeg" width="160" height="170" alt="Nasi Goreng"></td>
+                    <td><input type="number" min="0" value="0" oninput="if (this.value === '') this.value = '0';" id="makanan7-qty"></td>
+                    <td>Rp 0</td>
+                </tr>
+                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+            </tbody>
+        </table>
+    </div>
+    <div style="float: right; width: 360px;font-style: oblique;font-size: 30px;" id="total-pesanan"></div>
+    <br><br>
+    <br><br>
+    <div class="button-container">
+        <button style="height: 50px; font-size: 26px; background-color: #333;" id="reset-jumlah-pesanan-button">Reset Jumlah Pesanan</button>
+    </div>
+    <br><br>
+    <div class="container-h3">
+        <h4 style="font-size: 30px;">Pilih Nomor Meja</h4>
+        <div class="table-selector">
+            <label for="table-number" style="font-size: 25px;">Nomor Meja:</label>
+            <select id="table-number">
+                <option value="1">Meja 1</option>
+                <option value="2">Meja 2</option>
+                <option value="3">Meja 3</option>
+                <option value="4">Meja 4</option>
+                <option value="5">Meja 5</option>
+                <option value="6">Meja 6</option>
+                <option value="7">Meja 7</option>
+                <option value="8">Meja 8</option>
+                <option value="9">Meja 9</option>
+                <option value="10">Meja 10</option>
+                <!-- Tambahkan lebih banyak nomor meja jika diperlukan -->
+            </select>
+        </div>
+        <div id="selected-table">
+            <!-- Tempat untuk menampilkan nomor meja yang dipilih -->
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <h5> 
+        <button style="font-size: 20px;" id="tampilkan-bukti-pesanan-button">Tampilkan Bukti Pesanan</button>
+        <br><br>
+        <button style="font-size: 20px;" id="reset-bukti-pesanan-button" onclick="resetBuktiPesanan()">Reset Bukti Pesanan</button>
+
+    </h5>
+    <div id="bukti-pesanan" class="bukti-pesanan">
+        <h4>Bukti Pesanan</h4>
+        <p>Nomor Meja: <span id="bukti-nomor-meja"></span></p>
+        <p>Makanan yang Dipesan:</p>
+        <ul id="bukti-makanan-dipesan"></ul>
+        <p>Jumlah <span id="bukti-total-pesanan"></span></p>
+        <br><br>
+    </div>
+    <!-- Tautan untuk mencetak bukti pesanan -->
+    <h1 class="button-flex">
+        <button style="font-size: 30px; background-color: #333;"  id="buat-pesanan-button">Buat Pesanan</button>
+    </h1>
+    
+    <br><br>
+    <footer>
+        &copy; Prasetio Lukito
+    </footer>
+    </body>
+    </html>
